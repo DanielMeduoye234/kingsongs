@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import styles from "./partnersScroller.module.css";
+import styles from "./PartnersScroller.module.css";
 import Image from "next/image";
 
 export default function PartnersScroller() {
