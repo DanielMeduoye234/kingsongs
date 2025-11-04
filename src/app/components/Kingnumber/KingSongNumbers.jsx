@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import styles from "../Kingnumber/kingSongNumbers.module.css";
+import styles from "./KingSongNumbers.module.css";
 import { motion } from "framer-motion";
 import { FaStar } from "react-icons/fa";
 
