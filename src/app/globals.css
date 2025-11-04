@@ -3,9 +3,53 @@
   --foreground: #171717;
 }
 
+
+:root {
+  --font-primary: "Montserrat", sans-serif;
+
+  /* Optional: typography scale */
+  --font-size-h1: clamp(2rem, 5vw, 4.5rem);
+  --font-size-h2: clamp(1.8rem, 4vw, 3.5rem);
+  --font-size-h3: clamp(1.4rem, 3vw, 2rem);
+  --font-size-body: 1rem;
+  --font-weight-bold: 700;
+  --font-weight-medium: 500;
+  --font-weight-regular: 400;
+}
+
+html,
+body {
+  font-family: var(--font-primary);
+  color: #fff;
+  background-color: #000;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+p {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.6;
+  margin: 0;
+}
+
+
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #ffffff;
     --foreground: #ededed;
   }
 }
@@ -39,4 +83,10 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px; /* match your header height */
 }

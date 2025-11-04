@@ -1,0 +1,101 @@
+/* =============================
+   SECTION BASE
+============================= */
+.scrollerSection {
+  background: #fff;
+  padding: 3rem 0;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+/* Wrapper with mask fades */
+.scrollerWrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* =============================
+   SCROLLER TRACK
+============================= */
+.scrollerTrack {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  width: max-content;
+  animation: scrollInfinite 25s linear infinite;
+}
+
+.logoItem {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  object-fit: contain;
+  opacity: 0.9;
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* =============================
+   FADE OVERLAYS (Fog Effect)
+============================= */
+.fadeOverlay {
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.left {
+  left: 0;
+  background: linear-gradient(to right, #fff 40%, transparent);
+}
+
+.right {
+  right: 0;
+  background: linear-gradient(to left, #fff 40%, transparent);
+}
+
+/* =============================
+   ANIMATION
+============================= */
+@keyframes scrollInfinite {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* =============================
+   RESPONSIVE
+============================= */
+@media (max-width: 768px) {
+  .scrollerTrack {
+    gap: 2rem;
+    animation-duration: 20s;
+  }
+
+  .logo {
+    width: 80px !important;
+    height: auto !important;
+  }
+
+  .fadeOverlay {
+    width: 100px;
+  }
+}

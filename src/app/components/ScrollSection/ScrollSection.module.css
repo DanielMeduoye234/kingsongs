@@ -1,0 +1,385 @@
+/* ==========================================
+   BASE SECTION
+========================================== */
+.section {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(180deg, #ffffff 0%, #f6f6f6 100%);
+  overflow: visible;
+  isolation: isolate;
+  padding-top: 6rem; /* offset for header */
+}
+
+/* ✅ Desktop: Limit inner scroll height to ~350vh */
+.innerScroll {
+  position: relative;
+  width: 100%;
+  height: 350vh;
+  transition: all 0.8s ease;
+}
+
+/* ==========================================
+   SLIDES
+========================================== */
+.slide {
+  position: sticky;
+  top: 0;
+  height: 115vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  pointer-events: none;
+  will-change: opacity, transform;
+  transition: opacity 1.6s ease-in-out, transform 1.6s ease-in-out;
+}
+
+.slide.active {
+  pointer-events: auto;
+}
+
+.slideContent {
+  width: 85%;
+  max-width: 1300px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  pointer-events: auto;
+}
+
+/* ==========================================
+   TEXT COLUMN
+========================================== */
+.textColumn {
+  flex: 1;
+  background: #000;
+  color: #fff;
+  padding: 2.4rem;
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.title {
+  font-size: clamp(1.8rem, 3.6vw, 3.1rem);
+  font-weight: 600;
+  margin-bottom: 0.9rem;
+  text-transform: uppercase;
+}
+
+.description {
+  color: #d1d1d1;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  margin-bottom: 1.8rem;
+}
+
+/* ==========================================
+   SPECS GRID
+========================================== */
+.specGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.specCard {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: #111;
+  padding: 0.8rem 0.9rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+}
+
+.specCard:hover {
+  background: #171717;
+  transform: translateY(-2px);
+}
+
+.icon {
+  font-size: 1.15rem;
+  color: #e7865b;
+}
+
+.specCard div {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+}
+
+.specCard span {
+  font-size: 0.85rem;
+  color: #c5c5c5;
+}
+
+.specCard strong {
+  font-size: 0.95rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ==========================================
+   CTA BUTTON
+========================================== */
+.cta {
+  background: linear-gradient(135deg, #ff8c42, #e7865b);
+  color: #fff;
+  padding: 0.9rem 2rem;
+  border-radius: 999px;
+  border: none;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(231, 134, 91, 0.25);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.cta:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(231, 134, 91, 0.3);
+}
+
+/* ==========================================
+   IMAGE COLUMN
+========================================== */
+.imageColumn {
+  flex: 1.05;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  transition: transform 0.8s ease-in-out;
+}
+
+.imageWrap {
+  width: 90%;
+  min-height: 45vh;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.12);
+  transition: transform 1s ease-in-out;
+}
+
+.imageWrap img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  transition: transform 1.4s ease-in-out;
+}
+
+.imageWrap:hover img {
+  transform: scale(1.05);
+}
+
+/* ==========================================
+   POPUP MODAL
+========================================== */
+.popupOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.popupCard {
+  width: 92%;
+  max-width: 440px;
+  background: #fff;
+  color: #000;
+  border-radius: 16px;
+  padding: 2rem 1.8rem;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #000;
+  color: #fff;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.popupTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 1rem 0 1.4rem;
+}
+
+.contactOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.contact {
+  background: #000;
+  color: #fff;
+  padding: 0.9rem 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.contact:hover {
+  background: #e7865b;
+  transform: translateY(-2px);
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+/* ✅ Tablet (851px - 1024px) — Keep Flex Layout */
+@media (max-width: 1024px) and (min-width: 851px) {
+  .slideContent {
+    width: 90%;
+    gap: 1.5rem;
+  }
+
+  .textColumn {
+    padding: 2rem;
+  }
+
+  .imageWrap {
+    width: 80%;
+    min-height: 380px;
+  }
+}
+
+/* ✅ Tablet & Mobile Stacking (≤850px) */
+@media (max-width: 790px) {
+  .innerScroll {
+    height: auto; /* Tablet/Mobile unaffected */
+  }
+
+  .slide {
+    height: 125vh;
+  }
+
+  .slideContent {
+    flex-direction: column;
+    gap: 1.6rem;
+    width: 94%;
+    transform: scale(0.95);
+  }
+
+  .imageColumn {
+    order: -1;
+    min-height: 45vh;
+  }
+
+  .imageWrap {
+    width: 80%;
+    height: 360px;
+  }
+
+  .textColumn {
+    width: 100%;
+    padding: 2rem;
+  }
+}
+
+/* ✅ Mobile */
+@media (max-width: 768px) {
+  .slide {
+    height: 145vh;
+  }
+
+  .slideContent {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.2rem;
+    width: 100%;
+    transform: scale(0.93);
+  }
+
+  .imageColumn {
+    order: -1;
+    width: 100%;
+    min-height: 48vh;
+  }
+
+  .textColumn {
+    width: 100%;
+    background: #000;
+    border-radius: 14px;
+    padding: 1.6rem;
+  }
+
+  .specGrid {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+  }
+
+  .specCard {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .cta {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .specCard div {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .slide {
+    height: 155vh;
+  }
+
+  .textColumn {
+    padding: 1.3rem 1.1rem;
+  }
+
+  .imageWrap {
+    width: 88%;
+    min-height: 45vh;
+  }
+
+  .specCard {
+    font-size: 0.88rem;
+  }
+
+  .cta {
+    padding: 0.9rem 1.5rem;
+  }
+}
+
+/* ==========================================
+   DESKTOP HEIGHT FIX — FINAL OVERRIDE
+========================================== */
+@media (min-width: 1025px) {
+  .innerScroll {
+    height: 350vh !important; /* ✅ Force priority for desktop only */
+    transition: all 0.8s ease !important;
+  }
+}

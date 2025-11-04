@@ -1,0 +1,160 @@
+/* =============================
+   FOOTER BASE
+============================= */
+.footer {
+  background: #000;
+  margin-top: 20px;
+  color: #fff;
+  padding: 4rem 2rem 2rem;
+  font-family: "Inter", sans-serif;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =============================
+   GRID SECTION
+============================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.column h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  color: #fff;
+}
+
+.column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.column li {
+  margin-bottom: 0.6rem;
+}
+
+.column a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.column a:hover {
+  color: #e7865b;
+}
+
+.column p {
+  font-size: 0.9rem;
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.column svg {
+  color: #e7865b;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+/* =============================
+   BADGES SECTION
+============================= */
+.badges {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem 0;
+}
+
+.country img {
+  border-radius: 6px;
+  background: #111;
+  padding: 4px;
+}
+
+.shopify img {
+  background: #fff;
+  border-radius: 6px;
+  padding: 4px 8px;
+}
+
+.payments img {
+  opacity: 0.9;
+  filter: brightness(0.95);
+}
+
+/* =============================
+   BOTTOM SECTION
+============================= */
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bottom p {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin: 0;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.links a {
+  color: #bbb;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  color: #e7865b;
+}
+
+/* =============================
+   RESPONSIVE DESIGN
+============================= */
+@media (max-width: 768px) {
+  .badges {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.2rem;
+  }
+
+  .links {
+    justify-content: center;
+  }
+}
